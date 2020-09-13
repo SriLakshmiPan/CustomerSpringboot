@@ -2,7 +2,9 @@ package com.lakshmi.request;
 
 import java.io.Serializable;
 
-public class Customer implements Serializable {
+//import com.lakshmi.controller.GetCustomerDetailsbyIdResponse;
+
+public class CustomerRequest implements Serializable {
 	private static final long serialVersionUID = 3306262202463164113L;
 
 	public Integer getId() {
@@ -60,10 +62,11 @@ public class Customer implements Serializable {
 	private Integer phoneNumber;
 	private String item;
 
-	public void Customer() {
+	public void CustomerRequest() {
 	}
 
-	public void Customer(Integer id, String firstname, String lastname, String address, Integer phoneNumber,String item) {
+	public void CustomerRequest(Integer id, String firstname, String lastname, String address, Integer phoneNumber,
+			String item) {
 		this.id = id;
 		this.firstName = firstname;
 		this.lastName = lastname;
@@ -74,7 +77,7 @@ public class Customer implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Customer[id=" + id + ",firstName= " + firstName + ",lastName=" + lastName + ",address=" + address
+		return "CustomerRequest[id=" + id + ",firstName= " + firstName + ",lastName=" + lastName + ",address=" + address
 				+ ",phoneNUmber=" + phoneNumber + ",item=" + item + "]";
 	}
 }
